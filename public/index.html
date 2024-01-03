@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="%PUBLIC_URL%/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F87419" />
+    <meta
+      name="description"
+      content="Visit Artdevotee and Buy unique hand painted wallpapers for your smart phone and laptop at a very affordable price."
+      data-react-helmet="true"
+    />
+    <meta property="og:title" content="Artdevotee" data-react-helmet="true" />
+    <meta
+      property="og:description"
+      content="Visit Artdevotee and Buy unique hand painted wallpapers for your smart phone and laptop at a very affordable price."
+      data-react-helmet="true"
+    />
+    <meta
+      property="og:image"
+      content="https://artdevotee.com/preview/dev/images/how-bnr.png"
+      data-react-helmet="true"
+    />
+    <link
+      rel="canonical"
+      href="https://artdevotee.com"
+      data-react-helmet="true"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/bnr-logo.png" />
+
+    <title>Artdevotee</title>
+    <!--- bootstrap css --->
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%/css/bootstrap-reboot.css"
+      type="text/css"
+    />
+    <!-- owl carousel -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="%PUBLIC_URL%/css/owl.carousel.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="%PUBLIC_URL%/css/owl.theme.default.min.css"
+    />
+    <!-- custom stylesheet -->
+    <link type="text/css" rel="stylesheet" href="%PUBLIC_URL%/css/style.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="%PUBLIC_URL%/css/responsive.css"
+    />
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%/css/jequry-ui1.css"
+      type="text/css"
+    />
+    <!-- fontawesome stylesheet -->
+    <link href="%PUBLIC_URL%/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- fonts styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--product details slider-->
+    <link
+      href="%PUBLIC_URL%/css/ninja-slider.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="%PUBLIC_URL%/css/thumbnail-slider.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="%PUBLIC_URL%/js/jquery.min.js" type="text/javascript"></script>
+    <script src="%PUBLIC_URL%/js/jquery-ui.js" type="text/javascript"></script>
+    <script
+      src="%PUBLIC_URL%/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="%PUBLIC_URL%/js/bootstrap.bundle.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="%PUBLIC_URL%/js/owl.carousel.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="%PUBLIC_URL%/js/go_to_top.js" type="text/javascript"></script>
+    <script src="%PUBLIC_URL%/js/custom.js" type="text/javascript"></script>
+    <script
+      src="%PUBLIC_URL%/js/product-carousel.js"
+      type="text/javascript"
+    ></script>
+    <script src="%PUBLIC_URL%/js/thumbelina.js" type="text/javascript"></script>
+    <script src="%PUBLIC_URL%/js/calender.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(document).scrollTop() > 0) {
+            $("header").addClass("headerfixed");
+          } else {
+            $("header").removeClass("headerfixed");
+          }
+        });
+      });
+    </script>
+    <!-- banner carousel -->
+    <script>
+      $(".owl-bnr").owlCarousel({
+        margin: 23,
+        loop: true,
+        dots: false,
+        nav: true,
+        autoWidth: true,
+        items: 4,
+        responsive: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2.5,
+          },
+          1000: {
+            items: 2.5,
+          },
+        },
+      });
+    </script>
+    <!-- recent caraousel -->
+    <script>
+      $(document).ready(function () {
+        $(".owl-recent").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: true,
+          responsive: {
+            0: {
+              items: 2,
+            },
+            481: {
+              items: 2,
+            },
+            768: {
+              items: 3,
+            },
+            992: {
+              items: 3,
+            },
+            1200: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".dropdown-toggle").click(function () {
+          $(".dropdown-menu").slideToggle("slow");
+        });
+      });
+      $(document).on("click", function () {
+        var $target = $(event.target);
+
+        if (
+          !$target.closest(".dropdown-menu").length &&
+          !$target.closest(".dropdown-toggle").length &&
+          $(".dropdown-menu").is(":visible")
+        ) {
+          $(".dropdown-menu").slideUp();
+        }
+      });
+    </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
